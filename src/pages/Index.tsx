@@ -6,45 +6,52 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-sky-400 to-sky-200">
         <div 
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full opacity-90 z-0"
           style={{
-            clipPath: 'polygon(0 0, 100% 0, 100% 15%, 85% 20%, 70% 15%, 55% 25%, 40% 20%, 25% 30%, 10% 25%, 0 35%)',
             backgroundImage: `url('https://cdn.poehali.dev/projects/08fd97e7-8e26-47b2-b814-b08ccf8d6530/files/a74bc7d8-ddc8-441b-bb4c-e455eea16d5f.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         ></div>
         
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{
-            clipPath: 'polygon(0 35%, 10% 25%, 25% 30%, 40% 20%, 55% 25%, 70% 15%, 85% 20%, 100% 15%, 100% 60%, 85% 55%, 70% 65%, 55% 60%, 40% 70%, 25% 65%, 10% 75%, 0 70%)',
-            backgroundImage: `linear-gradient(135deg, hsl(84, 78%, 51%) 0%, hsl(84, 78%, 51%) 50%, hsl(199, 89%, 48%) 100%)`,
-          }}
-        >
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-32 h-32 grid grid-cols-6 gap-1">
-              {Array.from({ length: 36 }).map((_, i) => (
-                <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
-              ))}
-            </div>
-            <div className="absolute bottom-20 right-20 w-32 h-32 grid grid-cols-6 gap-1">
-              {Array.from({ length: 36 }).map((_, i) => (
-                <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <svg className="absolute inset-0 w-full h-full z-[1]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lightning-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style={{ stopColor: 'hsl(84, 78%, 51%)', stopOpacity: 0.85 }} />
+              <stop offset="50%" style={{ stopColor: 'hsl(84, 78%, 51%)', stopOpacity: 0.85 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(199, 89%, 48%)', stopOpacity: 0.85 }} />
+            </linearGradient>
+          </defs>
+          <polyline
+            points="0,200 150,250 300,180 450,240 600,160 750,220 900,140 1050,200 1200,120 1350,180 1500,100 1650,160 1800,80 1920,140"
+            fill="none"
+            stroke="url(#lightning-gradient)"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}
+          />
+          <polyline
+            points="0,600 150,550 300,620 450,560 600,640 750,580 900,660 1050,600 1200,680 1350,620 1500,700 1650,640 1800,720 1920,660"
+            fill="none"
+            stroke="url(#lightning-gradient)"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}
+          />
+        </svg>
         
         <div 
-          className="absolute inset-0 w-full h-full"
+          className="absolute bottom-0 right-0 w-[600px] h-[800px] z-[2]"
           style={{
-            clipPath: 'polygon(0 70%, 10% 75%, 25% 65%, 40% 70%, 55% 60%, 70% 65%, 85% 55%, 100% 60%, 100% 100%, 0 100%)',
             backgroundImage: `url('https://cdn.poehali.dev/projects/08fd97e7-8e26-47b2-b814-b08ccf8d6530/files/a74bc7d8-ddc8-441b-bb4c-e455eea16d5f.jpg')`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center bottom',
+            backgroundPosition: 'center center',
+            maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)',
+            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)',
           }}
         ></div>
 
