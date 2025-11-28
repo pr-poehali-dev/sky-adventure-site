@@ -6,58 +6,71 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div 
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(135deg, hsl(84, 78%, 51%) 0%, hsl(84, 78%, 51%) 50%, hsl(199, 89%, 48%) 100%)`
-        }}
-      >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 grid grid-cols-6 gap-1">
-            {Array.from({ length: 36 }).map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
-            ))}
-          </div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 grid grid-cols-6 gap-1">
-            {Array.from({ length: 36 }).map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
-            ))}
-          </div>
-          <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2">
-            <svg width="100" height="100" viewBox="0 0 100 100">
-              <path d="M50 10 L90 50 L50 90 L10 50 Z" fill="none" stroke="currentColor" strokeWidth="3" className="text-gray-900"/>
-            </svg>
-          </div>
-          <div className="absolute bottom-1/4 right-1/3">
-            <svg width="80" height="80" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="3" className="text-gray-900"/>
-            </svg>
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            clipPath: 'polygon(0 0, 100% 0, 100% 15%, 85% 20%, 70% 15%, 55% 25%, 40% 20%, 25% 30%, 10% 25%, 0 35%)',
+            backgroundImage: `url('https://cdn.poehali.dev/projects/08fd97e7-8e26-47b2-b814-b08ccf8d6530/files/a74bc7d8-ddc8-441b-bb4c-e455eea16d5f.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
+        
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            clipPath: 'polygon(0 35%, 10% 25%, 25% 30%, 40% 20%, 55% 25%, 70% 15%, 85% 20%, 100% 15%, 100% 60%, 85% 55%, 70% 65%, 55% 60%, 40% 70%, 25% 65%, 10% 75%, 0 70%)',
+            backgroundImage: `linear-gradient(135deg, hsl(84, 78%, 51%) 0%, hsl(84, 78%, 51%) 50%, hsl(199, 89%, 48%) 100%)`,
+          }}
+        >
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-32 h-32 grid grid-cols-6 gap-1">
+              {Array.from({ length: 36 }).map((_, i) => (
+                <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
+              ))}
+            </div>
+            <div className="absolute bottom-20 right-20 w-32 h-32 grid grid-cols-6 gap-1">
+              {Array.from({ length: 36 }).map((_, i) => (
+                <div key={i} className="w-1 h-1 bg-gray-900 rounded-full"></div>
+              ))}
+            </div>
           </div>
         </div>
+        
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            clipPath: 'polygon(0 70%, 10% 75%, 25% 65%, 40% 70%, 55% 60%, 70% 65%, 85% 55%, 100% 60%, 100% 100%, 0 100%)',
+            backgroundImage: `url('https://cdn.poehali.dev/projects/08fd97e7-8e26-47b2-b814-b08ccf8d6530/files/a74bc7d8-ddc8-441b-bb4c-e455eea16d5f.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center bottom',
+          }}
+        ></div>
 
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center mb-16">
             <div className="mb-8">
-              <h1 className="text-7xl md:text-9xl font-black text-gray-900 mb-4 tracking-tight">
+              <h1 className="text-7xl md:text-9xl font-black text-white drop-shadow-2xl mb-4 tracking-tight" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8)' }}>
                 ЭКСТРИМ
               </h1>
-              <h2 className="text-6xl md:text-8xl font-black text-gray-900 mb-4 tracking-tight">
+              <h2 className="text-6xl md:text-8xl font-black text-white drop-shadow-2xl mb-4 tracking-tight" style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8)' }}>
                 КЛУБ
               </h2>
             </div>
-            <p className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 tracking-wide">
+            <p className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-4 tracking-wide" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.7)' }}>
               ТВОЁ НОВОЕ ХОББИ
             </p>
             <div className="flex items-center justify-center gap-4 mb-12">
-              <div className="h-1 w-20 bg-gray-900"></div>
-              <p className="text-4xl md:text-6xl font-extrabold text-gray-900">
+              <div className="h-1 w-20 bg-white drop-shadow-lg"></div>
+              <p className="text-4xl md:text-6xl font-extrabold text-primary drop-shadow-xl" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8)' }}>
                 200% СЧАСТЬЯ
               </p>
-              <div className="h-1 w-20 bg-gray-900"></div>
+              <div className="h-1 w-20 bg-white drop-shadow-lg"></div>
             </div>
             <Button 
               size="lg" 
-              className="text-xl px-12 py-8 bg-gray-900 hover:bg-gray-800 text-white font-bold"
+              className="text-xl px-12 py-8 bg-primary hover:bg-primary/90 text-gray-900 font-bold shadow-2xl"
               asChild
             >
               <a href="#services">
@@ -69,7 +82,7 @@ const Index = () => {
         </div>
 
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" className="h-8 w-8 text-gray-900" />
+          <Icon name="ChevronDown" className="h-8 w-8 text-white drop-shadow-lg" />
         </div>
       </div>
 
